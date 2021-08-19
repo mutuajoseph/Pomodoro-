@@ -1,0 +1,77 @@
+/* Text and Typography */
+.text--white {
+    color: #fff;
+}
+
+.text--primary {
+    color: #0096c7;
+}
+
+.text--center {
+    text-align: center;
+}
+
+.font-sm {
+    font-size: 12px;
+}
+
+.text--danger {
+    color: red;
+}
+
+/* height and width */
+.h-2 {
+    height: 3rem;
+}
+
+/* unique classes */
+.header {
+    height: 100vh;
+    margin: 2rem 0;
+}
+
+.hero-image {
+    width: 80%;
+    height: auto;
+}
+
+.sign-up-image {
+    width: 600px;
+    height: 300px;
+}
+
+.login-card {
+    width: 400px;
+    margin: 0 auto;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+.ghost-button {
+    outline: none;
+    border: none;
+    margin: 1rem 0;
+    padding: .5rem 1rem;
+    width: 150px;
+    border-radius: 8px;
+    background-color: #0096c7;
+    color: #fff;
+    font-weight: 600;
+}
+
+.signup-ghost-button {
+    outline: none;
+    border: none;
+    margin: 1rem 0;
+    padding: .5rem 1rem;
+    width: 200px;
+    border-radius: 8px;
+    background-color: #0096c7;
+    color: #fff;
+    font-weight: 600;
+}
+
+/* my schedule page */
+
+/* .my-schedule {
+    border: 1px solid #111;
+} */

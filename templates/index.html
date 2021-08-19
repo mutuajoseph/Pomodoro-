@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<div class="container">
+    <div class="header">
+        <div class="d-flex justify-content-around align-items-center">
+            <div class="col">
+                <h1>Welcome to <span class="text--primary">Workaholics</span>  Pomodoro Tracker</h1>
+                <p>A productive timer for big teams and individuals</p>
+                <a href="{{url_for('signup')}}">
+                  <button class="btn btn-primary">Get Started</button>
+                </a>
+            </div>
+            <div class="col">
+              <img class="hero-image" src="../static/images/productivity.svg" alt="productivity image">
+            </div>
+          </div>
+    </div>
+</div>
+
+{% endblock %}

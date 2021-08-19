@@ -1,0 +1,75 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<div class="container">
+    <div class="header">
+        <div class="my-schedule">
+            <h4 class="px-2 pt-2"> Set up your work schedule</h4>
+            <div class="row">
+                <div class="col-5 mt-4 px-4">
+                    <form action="/schedules" method="post">
+                        {{form.hidden_tag()}}
+
+                        <div>
+                            <div class="fw-bold text-capitalize mb-2">
+                                {{ form.working_hours.label }}
+                            </div>
+                            <div>
+                                <p class="font-sm text--danger">*should not be more than an hour*</p>
+                                {{form.working_hours(size=30, class_="form-control" )}}
+                            </div>
+                        </div>
+                        <div class="mt-2">
+                            <div class="fw-bold text-capitalize mb-2">
+                                {{ form.breaks.label }}
+                            </div>
+                            <div>
+                                {{form.breaks(size=30, class_="form-control" )}}
+                            </div>
+                        </div>
+                        <div class="mt-2">
+                            <div class="fw-bold text-capitalize mb-2">
+                                {{ form.break_activities.label }}
+                            </div>
+                            <div>
+                                {{ form.break_activities(cols="35", rows="5", class_="form-control") }}
+                            </div>
+                        </div>
+                        <div>
+                            <input class="ghost-button" type="submit" value="Set Schedule">
+                        </div>
+                    </form>
+                </div>
+                <div class="col-7 mt-4">
+                    <table class="table">
+                        <thead>
+                            <tr class="table-dark">
+                                <th scope="col">#</th>
+                                <th scope="col">Work Hours</th>
+                                <th scope="col">Breaks</th>
+                                <th scope="col">Break Activities</th>
+                                <th scope="col">Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {% for schedule in schedules %}
+                            <tr>
+                                <th scope="row">1</th>
+                                <td>{{schedule.working_hours}}</td>
+                                <td>{{schedule.breaks}}</td>
+                                <td>{{schedule.break_activities}}</td>
+                                <td>
+                                    <button type="button" class="btn btn-sm btn-primary">Initiate Countdown</button>
+                                </td>
+                            </tr>
+                            {%  endfor %}
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}
