@@ -31,11 +31,11 @@ from models.schedule import Schedule
 def load_user(user_id):
     return User.query.get(int(user_id))
 
-# @app.before_first_request
-# def create_tables():
-#     db.create_all()
-#     # drop table 
-#     # db.drop_all()
+@app.before_first_request
+def create_tables():
+    db.create_all()
+    # drop table 
+    # db.drop_all()
 
 @app.route('/')
 def home():
