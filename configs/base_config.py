@@ -20,7 +20,7 @@ class Staging(Base):
     SQLALCHEMY_DATABASE_URI = ""
 
 class Production(Base):
-    DATABASE = "d28660h2fk15fb"
-    POSTGRES_USER = "ipktrlbhmvmouo"
-    POSTGRES_PASSWORD = "6b3e06372c7bd922870a305b2927632a4b25e482ecd9a949d275011209be2830"
-    SQLALCHEMY_DATABASE_URI= "postgresql://ipktrlbhmvmouo:6b3e06372c7bd922870a305b2927632a4b25e482ecd9a949d275011209be2830@ec2-54-236-137-173.compute-1.amazonaws.com:5432/d28660h2fk15fb"
+    DATABASE = ""
+    POSTGRES_USER = ""
+    POSTGRES_PASSWORD = ""
+    SQLALCHEMY_DATABASE_URI= ""
